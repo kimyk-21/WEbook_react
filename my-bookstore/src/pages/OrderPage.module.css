@@ -76,7 +76,7 @@
 .cancelButton {
   padding: 10px 20px;  /* 버튼 크기 조정 */
   border-radius: 5px;
-  font-size: 1.1rem;  /* 폰트 크기 줄임 */
+  font-size: 1rem;  /* 폰트 크기 줄임 */
   cursor: pointer;
 }
 

@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import styles from './SignUpPage.module.css';
 
+const BASE_URL = "https://swims.p-e.kr";
+
 function SignUpPage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -40,7 +42,7 @@ function SignUpPage() {
 
     try {
       const response = await axios.post(
-        'https://swims.p-e.kr/api/Id_such', 
+        `${BASE_URL}/api/Id_such`, 
         email, 
         {
           headers: { 'Content-Type': 'text/plain' },
@@ -86,7 +88,7 @@ function SignUpPage() {
     }
 
     try {
-      await axios.post('https://swims.p-e.kr/api/register', {
+      await axios.post(`${BASE_URL}/api/register`, {
         userId: email,
         email,
         password,
@@ -233,7 +235,13 @@ function SignUpPage() {
         {fieldErrors.age && <span className={styles.errorText}>{fieldErrors.age}</span>}
       </div>
 
-      <button className={styles.signupButton} onClick={handleSignUp}>회원가입</button>
+      <button 
+      className={styles.signupButton} 
+      onClick={handleSignUp}
+      disabled={emailExists || !emailChecked}
+      >
+        회원가입
+        </button>
     </div>
   );
 }
