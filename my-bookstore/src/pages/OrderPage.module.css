@@ -116,3 +116,75 @@
 .paymentStatus.error {
   color: #ff4d4d;
 }
+  /* 반응형 스타일 */
+  @media (max-width: 720px) {
+    .container {
+      width: 80%; /* 화면 크기에 맞춰 자동 조정 */
+      max-width: 400px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+  
+    .input {
+      font-size: 14px; /* 작은 화면에서 입력 필드 폰트 크기 조정 */
+      padding: 10px;
+    }
+  
+    .button {
+      font-size: 15px;
+      padding: 9px;
+    }
+  
+    .linkContainer {
+      font-size: 14px;
+    }
+  }
+
+@media (max-width: 520px) {
+  .container {
+    width: 90%; /* 화면 크기에 맞춰 자동 조정 */
+    max-width: 350px;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+  .input {
+    font-size: 13px; /* 작은 화면에서 입력 필드 폰트 크기 조정 */
+    padding: 8px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .linkContainer {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 95%;
+    max-width: 300px;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .input {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .button {
+    font-size: 13px;
+    padding: 7px;
+  }
+
+  .linkText {
+    font-size: 12px;
+  }
+}
